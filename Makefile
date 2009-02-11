@@ -8,13 +8,13 @@
 %.pdf : %.eps
 	epstopdf $<
 
-TARGET=hacdc.tex
+TARGET=hacdc-talk.tex
 epsfiles := $(patsubst %.dia,%.eps,$(wildcard *.dia))
 pdffiles := $(patsubst %.dia,%.pdf,$(wildcard *.dia))
 
 clean:
 	rm -f *.dvi *.ps *.pdf *.snm *.toc *.aux *.out *.nav *.log \
-	*~ *.autosave *.vrb *.eps
+	*~ *.autosave *.vrb
 
 pdf: *.tex $(pdffiles)
 	pdflatex $(TARGET)
