@@ -10,7 +10,7 @@
 
 TARGET=hacdc-talk.tex
 epsfiles := $(patsubst %.dia,%.eps,$(wildcard *.dia))
-pdffiles := $(patsubst %.dia,%.pdf,$(wildcard *.dia))
+pdffiles := $(patsubst %.eps,%.pdf,$(wildcard *.eps))
 
 clean:
 	rm -f *.dvi *.ps *.pdf *.snm *.toc *.aux *.out *.nav *.log \
